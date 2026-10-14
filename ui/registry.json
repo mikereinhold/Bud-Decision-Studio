@@ -2192,7 +2192,9 @@
           "unit": "ratio",
           "conditions": "231 public tasks, window 4,096 tokens; served from the published files on one NVIDIA L4 (2B) or H100 (Gemma 4)",
           "source": "https://huggingface.co/StrandsAgents/strands-decider-2B-qwen3.5-v1-2610",
-          "note": "No Jev figure: the Strands team reports its own models only. Easy/standard/hard tiers reported on the model card"
+          "note": "Jev 1.13.0 figure from JevBench's published per-task outcomes on the same 231 public tasks (board v1.2 run against the production API, Sept 2026; results/v1.2/jevbench-v1.2-per-task.json in the fstandhartinger/jevbench repository; tiers 48/48 easy, 71/72 standard, 81/111 hard), not a Strands run. Jev was served at its own context limit, Strands at a 4,096-token window. Brier and ECE stay unpaired: the board publishes Jev's calibration only for the hard tier.",
+          "jev": 0.866,
+          "jev_display": "200/231"
         },
         {
           "suite": "JevBench public",
@@ -2857,7 +2859,9 @@
           "unit": "ratio",
           "conditions": "231 public tasks, window 4,096 tokens; served from the published files on one NVIDIA L4 (2B) or H100 (Gemma 4)",
           "source": "https://huggingface.co/StrandsAgents/strands-decider-E4B-gemma4-v1-2610",
-          "note": "No Jev figure: the Strands team reports its own models only. Easy/standard/hard tiers reported on the model card"
+          "note": "Jev 1.13.0 figure from JevBench's published per-task outcomes on the same 231 public tasks (board v1.2 run against the production API, Sept 2026; results/v1.2/jevbench-v1.2-per-task.json in the fstandhartinger/jevbench repository; tiers 48/48 easy, 71/72 standard, 81/111 hard), not a Strands run. Jev was served at its own context limit, Strands at a 4,096-token window. Brier and ECE stay unpaired: the board publishes Jev's calibration only for the hard tier.",
+          "jev": 0.866,
+          "jev_display": "200/231"
         },
         {
           "suite": "JevBench public",
@@ -3203,7 +3207,9 @@
           "unit": "ratio",
           "conditions": "231 public tasks, window 4,096 tokens; served from the published files on one NVIDIA L4 (2B) or H100 (Gemma 4)",
           "source": "https://huggingface.co/StrandsAgents/strands-decider-12B-gemma4-v1-2610",
-          "note": "No Jev figure: the Strands team reports its own models only. Easy/standard/hard tiers reported on the model card"
+          "note": "Jev 1.13.0 figure from JevBench's published per-task outcomes on the same 231 public tasks (board v1.2 run against the production API, Sept 2026; results/v1.2/jevbench-v1.2-per-task.json in the fstandhartinger/jevbench repository; tiers 48/48 easy, 71/72 standard, 81/111 hard), not a Strands run. Jev was served at its own context limit, Strands at a 4,096-token window. Brier and ECE stay unpaired: the board publishes Jev's calibration only for the hard tier.",
+          "jev": 0.866,
+          "jev_display": "200/231"
         },
         {
           "suite": "JevBench public",
