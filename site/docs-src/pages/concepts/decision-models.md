@@ -111,7 +111,7 @@ Every model below speaks the same request format and returns answers in the same
 | Intern-Decision 4B | `intern-decision-4b` | 4B | 10 GB | text, images | 62 | 8,192 | The best all-rounder |
 | Kev 4B | `kev-4b` | 4B | 9.5 GB | text | 255 | 8,192 | Careful and well calibrated; long policies |
 | Lev | `lev` | 4B | 9.5 GB | text | 500 | 8,192 | Hundreds of options per question |
-| Strands Decider Gemma 4 E4B | `strands-decider-gemma4-e4b` | 4B effective | 15 GB | text | 255 | 4,096 | Agent tool calls, code changes and policies on a shared GPU |
+| Strands Decider Gemma 4 E4B | `strands-decider-gemma4-e4b` | 4B | 15 GB | text | 255 | 4,096 | Agent tool calls, code changes and policies on a shared GPU |
 | CLM 8B | `clm-v0.1-8b` | 8B | 17 GB | text | 1,000 | 2,048 | Agent actions; ranking many candidates |
 | Strands Decider Gemma 4 12B | `strands-decider-gemma4-12b` | 12B | 23 GB | text | 255 | 4,096 | Long policies and code review; the best calibrated of the Strands family |
 | Jev-Omni | `jev-omni` | 12B | 26 GB | text, images, audio, video | 256 | 8,192 | The hardest questions; needs an NVIDIA GPU |

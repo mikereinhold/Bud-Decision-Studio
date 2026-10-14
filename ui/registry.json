@@ -2842,8 +2842,8 @@
       "maker_url": "https://huggingface.co/StrandsAgents",
       "paper_or_code_url": "https://github.com/strands-labs/strands-decider",
       "hf_url": "https://huggingface.co/StrandsAgents/strands-decider-E4B-gemma4-v1-2610",
-      "params": "4B effective, about 8B with per-layer embeddings (LoRA r48 adapter + pointer head; checkpoint 0.47 GB on a 16 GB base)",
-      "architecture": "Gemma 4 E4B instruction-tuned text decoder + LoRA r48 on attention and MLP projections + pointer head (dim 768); same shared-state, isolated-question serving as the 2B. Temperature fitted per question type. About 15 GB of GPU memory for the weights in bf16; 139 ms median per JevBench question on one H100. Text only",
+      "params": "4B (LoRA r48 adapter + pointer head; checkpoint 0.47 GB on a 16 GB base)",
+      "architecture": "Gemma 4 E4B instruction-tuned text decoder (4B effective parameters, about 8B with per-layer embeddings) + LoRA r48 on attention and MLP projections + pointer head (dim 768); same shared-state, isolated-question serving as the 2B. Temperature fitted per question type. About 15 GB of GPU memory for the weights in bf16; 139 ms median per JevBench question on one H100. Text only",
       "base_model": "google/gemma-4-E4B-it (revision ee0ef602)",
       "training": "135,602 rows: hobson-v21's 123,339 (public classification, multi-step documents, adequacy) plus 12,263 code-task rows; targets are the output distributions of a frozen Qwen3.5-4B teacher with an anchor toward strands-decider-2B-hobson-v19; three seeds of one epoch (4,109 steps) on 8 H100s, souped and calibrated",
       "benchmarks": [

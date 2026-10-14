@@ -274,11 +274,12 @@ CATALOG: list[ModelSpec] = [
         id="strands-decider-gemma4-e4b", name="Strands Decider Gemma 4 E4B", maker="Strands Agents", adapter="strands",
         repo=Repo("StrandsAgents/strands-decider-E4B-gemma4-v1-2610", exclude=("eval/*",), size_gb=0.47, likes=3),
         base=Repo("google/gemma-4-E4B-it", size_gb=16.02, likes=1708),
-        params="4B effective (8B with per-layer embeddings)", memory_gb=15.0, speed="fast",
+        params="4B", memory_gb=15.0, speed="fast",
         tagline="Strands Decider on Gemma 4, for a shared GPU.",
         summary="The same adapter and pointer head as Strands Decider 2B, trained on Gemma 4 E4B with 135,602 rows including "
                 "12,263 code tasks. Better calibrated than the 2B (Brier 0.243 against 0.280) and the Strands team's pick when "
-                "the model must share one GPU with other work.",
+                "the model must share one GPU with other work. Gemma 4 E4B runs 4B effective parameters; the full checkpoint "
+                "is about 8B once per-layer embeddings are counted, which is why it needs more memory than other 4B models.",
         good_for=("Code review, commit and test decisions (0.82 on held-out code tasks)", "Checking an agent's tool calls",
                   "Intent, topic and policy checks", "Choices with up to 255 options"),
         watch_out=("Text only: the Gemma 4 models do not read images", "Long, multi-step documents are its weak spot",
