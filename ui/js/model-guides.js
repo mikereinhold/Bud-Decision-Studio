@@ -64,6 +64,27 @@ export const GUIDES = {
     q: { choice: 'What should the agent do next?' },
     examples: ['agent-browser', 'tool-call', 'text-game'],
   },
+  'strands-decider-2b': {
+    madeFor: 'Checking what an AI agent is about to do, and quick routing with many options, in a small model that runs on a processor.',
+    tip: 'Strands reads the document more than the question, so make the question\'s obvious reading the intended one and put the deciding facts in the state.',
+    state: 'Paste the user\'s request, the agent\'s plan or the message to classify. JSON works well.',
+    q: { choice: 'What should the assistant do first?', noul: 'Does the customer threaten to cancel or leave?' },
+    examples: ['tool-call', 'support', 'banking77'],
+  },
+  'strands-decider-gemma4-e4b': {
+    madeFor: 'Code-change assessment, policy decisions and agent next-step checks on a GPU that is shared with other work.',
+    tip: 'Strands reads the document more than the question, so make the question\'s obvious reading the intended one and put the deciding facts in the state.',
+    state: 'Paste a diff, a policy and a case, or the agent\'s goal and what it sees now.',
+    q: { choice: 'Which area does the change touch?', noul: 'Is the customer entitled to a refund under this policy?' },
+    examples: ['code', 'policy-refund', 'agent-browser'],
+  },
+  'strands-decider-gemma4-12b': {
+    madeFor: 'The hardest text decisions in the Strands family: long policies, code review and agent steps, with the best calibration.',
+    tip: 'Strands reads the document more than the question, so make the question\'s obvious reading the intended one and put the deciding facts in the state.',
+    state: 'Paste a diff, a policy and a case, or the agent\'s goal and what it sees now.',
+    q: { choice: 'Which rule of the policy decides this case?', noul: 'Should a senior engineer review this before merging?' },
+    examples: ['policy-refund', 'code', 'agent-browser'],
+  },
   'jev-omni': {
     madeFor: 'The hardest questions, plus images, audio (up to 30 seconds) and video (16 frames).',
     state: 'Describe the situation and attach a photo, a voice note or a short video.',
